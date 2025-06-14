@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: 123 # has to be the same in db.js
+      POSTGRES_USER: user
+      POSTGRES_DB: db123
+  app:
+    image: my-node-app
+    ports:
+      - 13000:3000 # maps the internal 3000 port of docker to be accessible by port 13000

@@ -1,0 +1,14 @@
+### set up database
+GET http://localhost:13000/setup
+
+### select * from database
+GET http://localhost:13000/
+
+### add entry to the database
+POST http://localhost:13000/
+Content-Type: application/json
+
+{
+    "name": "Balázs",
+    "location": "home"
+}
